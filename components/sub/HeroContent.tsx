@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import { SparklesIcon } from '@heroicons/react/16/solid'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const HeroContent = () => {
     return (
@@ -21,35 +22,37 @@ const HeroContent = () => {
                 <motion.div
                     variants={slideInFromLeft(0.5)}
                     className='flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto'>
-                        <span>
-                    Providing
-                    <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 ' > the best  </span>
-                    Project Experience
+                    <span>
+                        Providing
+                        <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 ' > the best  </span>
+                        Project Experience
                     </span>
                 </motion.div>
                 <motion.p
                     variants={slideInFromLeft(0.8)}
                     className='text-lg text-gray-400 my-5 max-w-[600px]'>
                     I&apos;m a Full Stack Software Engineer with experice in website,
-                    Mobile, and Software development.Checkout my projects and skills.
-
+                    Mobile, and Software development. Checkout my projects and skills.
 
                 </motion.p>
-                <motion.a
-                    variants={slideInFromLeft(1)}
-                    className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]'>
-                    Learn More!
-                </motion.a>
+                
+                    <motion.a
+                        variants={slideInFromLeft(1)}
+                        className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]'>
+                             <Link href="https://github.com/ruth987">
+                Learn More!
+                </Link>
+                    </motion.a>
 
             </div>
             <motion.div
-            variants={slideInFromRight(0.8)}
-            className='w-full h-full flex justify-center items-center'>
+                variants={slideInFromRight(0.8)}
+                className='w-full h-full flex justify-center items-center'>
                 <Image
-                src = "/mainIconsdark.svg"
-                alt = "work icons"
-                height = {650}
-                width = {650}
+                    src="/mainIconsdark.svg"
+                    alt="work icons"
+                    height={650}
+                    width={650}
                 />
             </motion.div>
 
